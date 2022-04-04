@@ -21,6 +21,8 @@ var lstName = ["Haha","Hoo","Uff"]
 print(studentsName["firstName"]!+studentsName["lastName"]! )
 
 
+var changes = ["Changes DOne"]
+
 var person = "Angry"
 var feel: String = "Hate"
 
