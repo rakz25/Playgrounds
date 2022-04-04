@@ -16,7 +16,7 @@ class GPayAccount {
             
             if newAccountBalance < 1000 {
                 
-                print("You have minimum balance for transation")
+                print("Cannot transaction because of low balance")
             }
         }
     }
@@ -35,15 +35,17 @@ class GPayAccount {
     func withDrawnMoney(deductedMoney:Double){
         
         accountBalance -= deductedMoney
+        print("Money Withdrawn \(deductedMoney)")
     }
     
     func sendCustMessage(){
-        print("You have minimum balance \(accountBalance)")
+        print("You have minimum balance \(accountBalance) for transaction")
         
     }
     
 }
 
-let myBank = GPayAccount(_openingBalance:1000)
-myBank.withDrawnMoney(deductedMoney:500)
+let myBank = GPayAccount(_openingBalance:75000)
+myBank.addMoney(receivedMoney: 10000)
+myBank.withDrawnMoney(deductedMoney:84500)
 //: [Next](@next)
